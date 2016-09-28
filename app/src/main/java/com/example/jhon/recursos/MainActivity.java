@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.mascotas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
     }
 
 

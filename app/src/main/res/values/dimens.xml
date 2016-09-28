@@ -7,4 +7,5 @@
     <dimen name="textSizeMedium">18sp</dimen>
     <dimen name="textSizeSmall">16sp</dimen>
     <dimen name="medium_padding">8dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
 </resources>
