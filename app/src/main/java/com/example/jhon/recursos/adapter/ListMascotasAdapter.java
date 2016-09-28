@@ -4,8 +4,12 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.jhon.recursos.R;
 import com.example.jhon.recursos.models.Mascota;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -39,8 +43,18 @@ public class ListMascotasAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = View.inflate(context,)
+        View v = convertView;
+        if (v == null){
+            v =  View.inflate(context, R.layout.template_list_mascotas,null);
+        }
 
-        return null;
+        ImageView img = (ImageView) v.findViewById(R.id.imagen);
+        TextView raza = (TextView) v.findViewById(R.id.raza);
+        TextView estado = (TextView) v.findViewById(R.id.estado);
+        String[] estadoString = context.getResources().getStringArray(R.array.estado);
+        Picasso.with(context).load(data.get(position).getUrlImg()).into(img);
+        raza.setText(data.get(position).getRaza());
+        estado.setText(estadoString[data.get(position).getEstado()]);
+        return v;
     }
 }

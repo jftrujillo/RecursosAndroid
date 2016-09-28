@@ -7,6 +7,7 @@ public class Mascota {
     public static final int ENFERMO = 0;
     public static final int SANO = 1;
     public static final int URGENTE = 2;
+    public static final int ADOPTADO = 3;
 
     String raza;
     String color;

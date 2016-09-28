@@ -2,4 +2,10 @@
     <string name="app_name">Mascotapp</string>
     <string name="mascotas">Mascotas</string>
     <string name="raza">Raza</string>
+    <string-array name="estado">
+        <item>Sano</item>
+        <item>Enfermo</item>
+        <item>Urgente</item>
+        <item>Adoptado</item>
+    </string-array>
 </resources>

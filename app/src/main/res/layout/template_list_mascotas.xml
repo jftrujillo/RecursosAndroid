@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="300dp">
 
-    <ImageView
-        android:id="@+id/imagen"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        />
+        android:layout_height="match_parent"
+        app:cardElevation="4dp"
+        android:layout_margin="@dimen/card_margin"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                />
 
-    <TextView
-        android:id="@+id/raza"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/raza"
-        android:layout_below="@id/imagen"
-        style="@style/TextViewCusto"
-        />
-    <TextView
-        android:id="@+id/estado_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Estado: "
-        style="@style/TextViewCusto"
-        android:layout_below="@id/raza"
-        android:layout_margin="@dimen/medium_margin"
-        />
-    <TextView
-        android:id="@+id/estado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/estado_label"
-        android:layout_below="@id/raza"
-        android:text="Estado"
-        style="@style/textViewCustomRed"
-        />
+            <TextView
+                android:id="@+id/raza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/raza"
+                android:layout_below="@id/imagen"
+                style="@style/TextViewCusto"
+                />
+            <TextView
+                android:id="@+id/estado_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado: "
+                style="@style/TextViewCusto"
+                android:layout_below="@id/raza"
+                android:layout_margin="@dimen/medium_margin"
+                />
+            <TextView
+                android:id="@+id/estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/estado_label"
+                android:layout_below="@id/raza"
+                android:text="Estado"
+                style="@style/textViewCustomRed"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
 
 
 </RelativeLayout>
