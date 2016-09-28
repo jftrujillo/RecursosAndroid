@@ -35,7 +35,8 @@
         android:layout_toRightOf="@id/estado_label"
         android:layout_below="@id/raza"
         android:text="Estado"
-        android:layout_margin="@dimen/medium_margin"
+        style="@style/textViewCustomRed"
         />
+
 
 </RelativeLayout>
