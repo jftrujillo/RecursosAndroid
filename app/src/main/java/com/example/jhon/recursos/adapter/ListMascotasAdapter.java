@@ -1,12 +1,10 @@
 package com.example.jhon.recursos.adapter;
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.jhon.recursos.R;
 import com.example.jhon.recursos.models.Mascota;
 import com.squareup.picasso.Picasso;
@@ -47,7 +45,6 @@ public class ListMascotasAdapter extends BaseAdapter {
         if (v == null){
             v =  View.inflate(context, R.layout.template_list_mascotas,null);
         }
-
         ImageView img = (ImageView) v.findViewById(R.id.imagen);
         TextView raza = (TextView) v.findViewById(R.id.raza);
         TextView estado = (TextView) v.findViewById(R.id.estado);
