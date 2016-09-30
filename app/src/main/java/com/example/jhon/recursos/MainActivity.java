@@ -6,10 +6,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.example.jhon.recursos.adapter.ListMascotasAdapter;
+import com.example.jhon.recursos.dao.MascotaDao;
+import com.example.jhon.recursos.models.Mascota;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ListView list;
+    List<Mascota> data;
+    ListMascotasAdapter adapter;
 
 
     @Override
@@ -21,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.mascotas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        data = new ArrayList<>();
+        data.addAll(MascotaDao.mascotasInit());
+        adapter = new ListMascotasAdapter(data,this);
+        list.setAdapter(adapter);
     }
 
 
