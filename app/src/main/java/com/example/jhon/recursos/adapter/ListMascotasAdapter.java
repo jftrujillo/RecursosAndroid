@@ -52,6 +52,11 @@ public class ListMascotasAdapter extends BaseAdapter {
         Picasso.with(context).load(data.get(position).getUrlImg()).into(img);
         raza.setText(data.get(position).getRaza());
         estado.setText(estadoString[data.get(position).getEstado()]);
+        if (!context.getResources().getBoolean(R.bool.isPortrait)){
+            TextView textView = (TextView) v.findViewById(R.id.descripcion);
+            textView.setText(data.get(position).getDescripcion());
+        }
+
         return v;
     }
 }
